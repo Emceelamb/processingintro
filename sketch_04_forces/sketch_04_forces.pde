@@ -10,11 +10,11 @@ void setup() {
 
 void draw() {
   background(230);
-  PVector wind = new PVector(0.2,0);
-  PVector gravity = new PVector(0,0.3);
+  PVector wind = new PVector(0.2, 0);
+  PVector gravity = new PVector(0, 0.3);
   for (int i = 0; i < ps.size(); i ++) {
     Particle p = ps.get(i);
-    if(mousePressed){
+    if (mousePressed) {
       p.applyForce(wind);
     }
     p.applyForce(gravity);
@@ -44,11 +44,11 @@ class Particle {
     acceleration = new PVector(0, 0);
     velocity = new PVector(0, 0);
     radius = random(20, 40);
-    mass = random(1,5);
+    mass = random(1, 5);
   }
 
   void applyForce(PVector force) {
-    PVector f = PVector.div(force,mass);
+    PVector f = PVector.div(force, mass);
     acceleration.add(f);
   }
 
@@ -56,7 +56,7 @@ class Particle {
     velocity.add(acceleration);
     location.add(velocity);
     //lifespan-=2;
-    
+
     acceleration.mult(0);
   }
 
