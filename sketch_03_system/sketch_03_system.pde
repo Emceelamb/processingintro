@@ -1,4 +1,4 @@
-int total = 50;
+int total = 20;
 ArrayList<Particle> plist = new ArrayList<Particle>();
 
 Particle particle[];
